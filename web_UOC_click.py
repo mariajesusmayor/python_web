@@ -1,3 +1,4 @@
+
 from selenium import webdriver
 import requests
 
@@ -27,3 +28,4 @@ print(tagElem)
     #print(tagElem.getText())
 
 #divElem = browser.find_element_by_class_name("col-xs-12.col-clear.page-module.nav-brands-desktop")
+

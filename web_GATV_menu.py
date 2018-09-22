@@ -20,4 +20,3 @@ for i in range(numEnlaces):
     urldefinitiva = urlbase + navElem[i].text
     print(navElem[i].text)
     webbrowser.open(urldefinitiva)
-

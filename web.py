@@ -4,7 +4,7 @@ __author__ = '@txuseta'
 from bs4 import BeautifulSoup
 import requests
 import webbrowser
-from selenium import webdriver
+#from selenium import webdriver
 
 URL = "https://saucelabs.com/resources/articles/selenium-tips-css-selectors"
 
@@ -14,15 +14,16 @@ req = requests.get(URL)
 # Comprobamos que la petición nos devuelve un Status Code = 200
 status_code = req.status_code
 if status_code == 200:
-	html = BeautifulSoup(req.text, "html.parser")
-	nav = html.find_all("div", {"class":"_26rf"})
-	print(type(nav))
-	print(len(nav))
-	print(enumerate(nav))
-	for i, elemento in enumerate(nav):
-		titulo = elemento.find("span")
+        html = BeautifulSoup(req.text, "html.parser")
+        nav = html.find_all("div", {"class":"_2r81"})
+        #nav = html.find_all(class_="_2r81")
+        for texto in nav:
+            print(texto.text)
 
-
+        hilite = html.find_all("div", {"class":"codehilite"})
+        for snippets in hilite:
+            print(snippets.text)
+        
 
     # # Pasamos el contenido HTML de la web a un objeto BeautifulSoup()
     # html = BeautifulSoup(req.text, "html.parser")

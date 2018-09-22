@@ -1,3 +1,4 @@
+
 from bs4 import BeautifulSoup
 import requests
 import webbrowser
@@ -15,4 +16,3 @@ title = soup.select("h1.grid--cell")
 print(title[0].text.strip())
 
 #recuperar las n primeras y dar el enunciado de la pregunta
-
