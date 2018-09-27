@@ -10,11 +10,9 @@ browser.get(url)
 
 busquedaElem = browser.find_element_by_id("ke_search_sword")
 
-
-texto = raw_input("¿Qué buscas? ")
+texto = input("¿Qué buscas? ")
+busquedaElem.clear()
 busquedaElem.send_keys(texto)
-
-
 busquedaElem.submit()
 
 
